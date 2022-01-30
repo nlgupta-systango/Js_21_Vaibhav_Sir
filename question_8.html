@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<input type="number" required name="indexNum" id="iNum">
+<button onclick=checkIndex()>Get day</button>
+<h1 id="result"></h1>
+
+
+
+
+    <script>
+       
+        let result = document.getElementById("result");
+
+
+        function checkIndex() {
+            let days = parseInt(document.getElementById("iNum").value);
+
+            switch (days) {
+                case 0:
+                    result.innerText = "Sunday";
+                    break;
+                case 1:
+                    result.innerText = "Monday";
+
+                    break;
+                case 2:
+                     result.innerText = "Tuesday";
+                    break;
+                case 3: 
+                result.innerText = "Wednessday";
+                    break;
+                case 4:
+                     result.innerText = "Thurday";
+                    break;
+                case 5: 
+                result.innerText = "Friday";
+                    break;
+                case 6:
+                     result.innerText = "Saturday";
+                    break;
+                default: 
+                result.innerText = "invalid index, range must be in (0-6)";
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
