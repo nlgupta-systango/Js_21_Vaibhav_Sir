@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <pre id="result" style="font-size: 25px;"></pre>
+    <script>
+        let rows = parseInt(window.prompt("enter number of Rows"));
+        let result = document.getElementById("result");
+        let currentLine;
+        result.innerHTML = "";
+
+        for (let i = 0; i < rows; i++) {
+            currentLine = "";
+
+            for (let spaces = 0; spaces < rows - i - 1; spaces++) { currentLine = currentLine + " "; }
+
+            for (let stars = 0; stars < (2 * i) + 1; stars++) { currentLine = currentLine + "*"; }
+
+            result.innerHTML = result.innerHTML + "<br>" + currentLine;
+        }
+
+    </script>
+</body>
+
+</html>
