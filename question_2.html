@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" required placeholder="enter Binary number" name="num" id="binNum">
+    <button onclick=convertBinToDec()>convert</button>
+    <h1 id='decVal'></h1>
+    
+<script>
+  function  convertBinToDec(){
+        let binNum=document.getElementById("binNum").value;
+        document.getElementById("decVal").innerText=parseInt(binNum, 2).toString(10);
+    
+    }
+    
+    </script>
+</body>
+</html>
