@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script> 
+    let num=parseInt(window.prompt("enter a number"));
+ 
+function isPowerOfTwo(n)
+{
+    if (n == 0)
+        return false;
+    while (n != 1)
+    {
+        if (n%2 != 0)
+            return 0;
+        n = n/2;
+    }
+    return true;
+}
+isPowerOfTwo(num)?alert("YES perfect power of 2 "):alert("NO");
+
+
+
+
+</script>
+</html>
