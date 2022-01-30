@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question 1</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <h3 id="format1"></h3>
+    <h3 id="format2"></h3>
+    <h3 id="format3"></h3>
+    <script>
+        let format1 = document.getElementById("format1");
+        let format2 = document.getElementById("format2");
+        let format3 = document.getElementById("format3");
+        let days = ["Sunday", "Monday", "Tuesday", "Wednessday", "Friday", "Saturday"];
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        function getTime() {
+            let todayTime = new Date();
+            console.log(todayTime);
+            format1.innerHTML = `Format A: ${days[todayTime.getDay()].slice(0, 3)}, ${months[todayTime.getMonth()].slice(0, 3)} ${todayTime.getDate()} ${todayTime.getFullYear()}, ${todayTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}`;
+            format2.innerHTML = `Format B: ${todayTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}, ${days[todayTime.getDay()]}, ${todayTime.getDate()} ${months[todayTime.getMonth()]} ${todayTime.getFullYear()}`;
+            format3.innerHTML = `Format C: ${todayTime.getDate()}/${todayTime.getMonth() + 1}/${todayTime.getFullYear()} ${todayTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}`
+
+        }
+        setInterval(getTime, 1000);
+    </script>
+</body>
+
+</html>
