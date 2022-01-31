@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ptxt" onmouseover=changeColor() style="font-size: 30px;">this is dummy text hover to change color</p>
+
+
+    <script>
+        function changeColor(){
+        let pTxt=document.getElementById("ptxt");
+        let colorArray=["red","green","yellow","blue","orange"];
+        let randNum=parseInt(Math.random()*10);
+        let newColor=colorArray[randNum%(colorArray.length)];
+        console.log(newColor)
+        pTxt.style.color=newColor;
+    }
+
+       
+    </script>
+</body>
+</html>
