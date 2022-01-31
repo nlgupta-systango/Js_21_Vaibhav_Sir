@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1" style="background-color: red; height: 50px;">
+        <h2 id="txt1">this is div 1</h2>
+    </div>
+    <div id="box2"  style="background-color: yellow; height: 50px;">
+
+        <h2 id="txt2">this is div 2</h2>
+    </div>
+    <button onclick=change()>Interchange change</button>
+<script>
+    function change(){
+        let box1=document.getElementById("box1");
+        let box2=document.getElementById("box2");
+        let tempColor=box1.style.backgroundColor;
+        box1.style.backgroundColor=box2.style.backgroundColor;
+        box2.style.backgroundColor=tempColor;
+        let txt1=document.getElementById("txt1");
+        let txt2=document.getElementById("txt2");
+        let tempTxt=txt1.innerText;
+        txt1.innerText=txt2.innerText;
+        txt2.innerText=tempTxt;
+
+    }
+
+
+</script>
+</body>
+</html>
