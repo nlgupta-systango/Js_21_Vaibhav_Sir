@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="userText" id="userVal">
+
+    <button onclick=longestElement()>Get longest word</button>
+    <h3 id="result"></h3>
+    <script>
+        let userVal = document.getElementById("userVal");
+        let result = document.getElementById("result");
+        function longestElement() {
+            let longestLength = 0;
+
+            console.log(userVal.value);
+
+            words = userVal.value.split(" ");
+            console.log(words);
+
+            for (let word of words) {
+                if (longestLength < word.length) {
+                    longestLength = word.length;
+                }
+            }
+            for (let word of words) {
+                if (longestLength === word.length) {
+                    result.innerText = result.innerText + word + ",";
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
